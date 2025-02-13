@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { NavLink } from "react-router-dom";
 
 const Container = styled.div`
   display: flex;
@@ -8,7 +9,7 @@ const Container = styled.div`
   justify-content: space-between;
   align-items: center;
   width: 90%;
-  margin: 0 auto 50px auto; //38px from the image, 38px from the staff
+  margin: 0 auto 50px auto;
   padding: 20px 40px;
 `;
 
@@ -19,8 +20,20 @@ const NavItem = styled.div`
   font-weight: 400;
   cursor: pointer;
   position: relative;
+  text-decoration: none;
 
   &:hover::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #d6c26b;
+    border-radius: 2px;
+  }
+
+  &.active::after {
     content: "";
     position: absolute;
     bottom: -5px;
@@ -35,13 +48,27 @@ const NavItem = styled.div`
 const NavBar = () => {
   return (
     <Container>
-      <NavItem>University</NavItem>
-      <NavItem>City</NavItem>
-      <NavItem>Opinion</NavItem>
-      <NavItem>A&C</NavItem>
-      <NavItem>Sports</NavItem>
-      <NavItem>Spectrum</NavItem>
-      <NavItem>Podcast</NavItem>
+      <NavItem as={NavLink} to="/" end>
+        University
+      </NavItem>
+      <NavItem as={NavLink} to="/city">
+        City
+      </NavItem>
+      <NavItem as={NavLink} to="/opinion">
+        Opinion
+      </NavItem>
+      <NavItem as={NavLink} to="/ac">
+        A&C
+      </NavItem>
+      <NavItem as={NavLink} to="/sports">
+        Sports
+      </NavItem>
+      <NavItem as={NavLink} to="/spectrum">
+        Spectrum
+      </NavItem>
+      <NavItem as={NavLink} to="/podcast">
+        Podcast
+      </NavItem>
     </Container>
   );
 };
