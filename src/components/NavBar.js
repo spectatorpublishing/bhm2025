@@ -8,8 +8,8 @@ const Container = styled.div`
   justify-content: space-between;
   align-items: center;
   width: 90%;
-  margin: 0 auto 50px auto; //38px from the image, 38px from the staff
   padding: 20px 40px;
+  margin: 0 auto 25px auto;
 `;
 
 const NavItem = styled.div`
