@@ -8,17 +8,19 @@ const Container = styled.div`
   border-radius: 15px;
   justify-content: space-between;
   align-items: center;
-  width: 40%;
+  width: 90%;
   padding: 20px 40px;
   margin: 0 auto 25px auto;
 
   @media (max-width: 768px) {
+    padding: 0;
     align-items: center;
-    width: 80%;
+    width: 70%;
     align-items: center;
-    padding: 10px 25px;
+    padding: 10px 40px;
+    // padding-top: 10px;
+    // padding-bottom: 10px;
     border-radius: 10px;
-    margin-bottom: 0;
   }
 `;
 
@@ -77,9 +79,6 @@ const NavBar = () => {
       <NavItem as={NavLink} to="/city">
         City
       </NavItem>
-      <NavItem as={NavLink} to="/opinion">
-        Opinion
-      </NavItem>
       <NavItem as={NavLink} to="/ac">
         A&C
       </NavItem>
@@ -88,9 +87,6 @@ const NavBar = () => {
       </NavItem>
       <NavItem as={NavLink} to="/spectrum">
         Spectrum
-      </NavItem>
-      <NavItem as={NavLink} to="/podcast">
-        Podcast
       </NavItem>
     </Container>
   );

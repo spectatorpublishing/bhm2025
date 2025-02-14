@@ -68,9 +68,9 @@ const Letter = styled.div`
 
     @media only screen and (max-width: 768px) {
         width: 80%;
+        margin-left: 0px;
         margin-top: 10px;
         font-size: 11.272px;
-        margin: 0;
     }
 
 `;
