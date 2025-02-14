@@ -120,7 +120,7 @@ const SVGBottomRight = styled(SVGCorner)`
     right: 0;
 `;
 
-const YellowArticle = ({ imageUrl, title, author, link }) => {
+const GreenArticle = ({ imageUrl, title, author, link }) => {
     return (
         <ArticleContainer>
             {/* Placeholder Background Image */}
@@ -165,4 +165,4 @@ const YellowArticle = ({ imageUrl, title, author, link }) => {
     );
 };
 
-export default YellowArticle;
+export default GreenArticle;

@@ -22,5 +22,11 @@ export const university_articles = [
         article_title: "A history of affirmative action at Columbia and Barnard",
         article_authors: "Wiann Wilson",
         article_link: "https://www.columbiaspectator.com/news/2025/02/12/a-history-of-affirmative-action-at-columbia-and-barnard/"
+    },
+    {
+        image_url: "https://www.youtube.com/watch?v=2g4BYaDYSRE",
+        article_title: "The return of Columbia's Gospel Choir",
+        article_authors:"Tasneem Meem, Jordan Pettiford, Hanan Ali, Ashlynne Graham, and Elliot Heath",
+        article_link:"https://www.youtube.com/watch?v=2g4BYaDYSRE"
     }
 ];

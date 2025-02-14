@@ -26,6 +26,7 @@ const HeaderDiv = styled.div`
     z-index: 10;
     color: white;
     text-align: center;
+    justify-content: center;
     width: 80%;
     margin-bottom: 35px;
 `;
@@ -39,12 +40,12 @@ const Header = styled.h1`
     font-style: normal;
     line-height: 2.5rem;
     padding-right: 10rem;
-    text-align: center;  /* Ensure text is centered */
+    text-align: center;
     
     @media only screen and (max-width: 768px) {
         font-size: 24px;
-        padding: 0; /* Remove right padding on smaller screens */
-        width: 100%; /* Allow full width usage */
+        padding: 0; 
+        width: 100%;
         line-height: 2rem;
     }
 `;
