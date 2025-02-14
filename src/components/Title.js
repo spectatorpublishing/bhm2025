@@ -18,6 +18,7 @@ const BHM = styled.div`
   @media (max-width: 768px) {
     font-size: 36px;
     margin: 21px auto;
+    height: 20px;
   }
 `;
 

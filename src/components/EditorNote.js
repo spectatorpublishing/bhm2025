@@ -39,20 +39,27 @@ const Illo = styled.img`
 `;
 
 const Title = styled.div`
-    color: #FFF;
-    font-family: 'Lusitana';
-    font-size: 50px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
+  display: inline-block; /* Only take up the space of its content */
+  color: #FFF;
+  font-family: 'Lusitana';
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  border-bottom: 3px solid #D6C26B;
 
-    @media only screen and (max-width: 768px) {
-        justify-content: center;
-        text-align: center;
-        width: 100%;
-        margin: 0;
-        font-size: 30px;
+
+  @media only screen and (max-width: 768px) {
+    font-size: 30px;
+    /* Center the title on smaller screens */
+    text-align: center;
+    margin: 0 auto;
+  }
 `;
+const Writing = styled.div`
+padding-top:-1000px;
+`
+
 
 const Letter = styled.div`
     width: 45%;
@@ -73,22 +80,6 @@ const Letter = styled.div`
         font-size: 11.272px;
     }
 
-`;
-
-const StyledHr = styled.hr`
-    justify-content: left;
-    width: 100%;
-    height: 3px;
-    flex-shrink: 0;
-    background-color: #D6C26B;
-    border: none;
-    border-radius: 3px;
-    margin: 0 auto;
-
-    @media only screen and (max-width: 768px) {
-        width: 90%;
-        margin: 0 auto; /* Keep it centered on mobile */
-    }
 `;
 
 const Signatures = styled.div`
@@ -150,9 +141,12 @@ const EditorNote = () => {
       <Container>
         <FlexContainer>
           <Illo src="BHM.png" alt="BHM art" />
+          
           <Letter>
               <Title>Letter from the Editors</Title>
-              <StyledHr />
+
+              <Writing>
+
               <br />
               Every February, Spectator dedicates a special edition in celebration of Black History Month, recognizing the lives and legacies of Black Americans throughout U.S. history. This year, like every year, our special edition seeks to highlight the voices, stories, and contributions of Black Columbians and Black residents of Morningside Heights and West Harlem—in history, today, and in the years to come.
               <br /><br />
@@ -160,6 +154,10 @@ const EditorNote = () => {
               <br /><br />
               Thank you for reading our 2025 Black History Month edition and for joining Spectator as we highlight these stories. We are excited—each month and each year—to continue the conversation and continue celebrating the indelible legacy of Black stories on and around our campus.
               <br /><br />
+
+
+              </Writing>
+           
               <Signatures>
                 <Signature className='left'><div className='name'>Shea Vance</div><div className='title'>Editor in Chief</div></Signature>
                 <Spacing/>

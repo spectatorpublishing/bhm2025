@@ -5,11 +5,12 @@ const ArticleContainer = styled.div`
     position: relative;
     width: 100%;
     max-width: 400px;
+    cursor: pointer; /* Indicates the element is clickable */
 
     @media (max-width: 768px) {
         justify-content: center;
         width: 80%;
-      }
+    }
 `;
 
 const ArticlePlaceholder = styled.img`
@@ -26,14 +27,31 @@ const ArticleImage = styled.img`
     left: 50%;
     width: 198px;
     height: 198px;
-    object-fit:cover;
+    object-fit: cover;
     transform: translate(-50%, -50%);
     z-index: 3;
 
     @media (max-width: 768px) {
         width: 160px;
         height: 160px;
-      }
+    }
+`;
+
+// ArticleVideo now mimics ArticleImage's styling for consistent placement
+const ArticleVideo = styled.iframe`
+    position: absolute;
+    top: 34%;
+    left: 50%;
+    width: 198px;
+    height: 198px;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+
+    @media (max-width: 768px) {
+        width: 160px;
+        height: 160px;
+    }
 `;
 
 const ArticleTextWrapper = styled.div`
@@ -43,7 +61,7 @@ const ArticleTextWrapper = styled.div`
     transform: translateX(-50%);
     text-align: center;
     z-index: 3;
-    width: 70%;
+    width: 90%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -61,7 +79,7 @@ const ArticleTitle = styled.div`
 
     @media (max-width: 768px) {
         font-size: 14px;
-      }
+    }
 `;
 
 const ArticleAuthor = styled.div`
@@ -75,12 +93,12 @@ const ArticleAuthor = styled.div`
 
     @media (max-width: 768px) {
         font-size: 10px;
-      }
+    }
 `;
 
 const SVGCorner = styled.div`
     position: absolute;
-    width: 80px; 
+    width: 80px;
     height: 80px;
     z-index: 2;
 `;
@@ -105,49 +123,79 @@ const SVGBottomRight = styled(SVGCorner)`
     right: 0;
 `;
 
-const YellowArticle = ({ imageUrl, title, author, link }) => {
+// Transforms a standard YouTube URL into an embeddable URL
+const transformYouTubeLink = (link) => {
+    if (!link) return '';
+  
+    let newLink = link;
+  
+    // e.g. "https://www.youtube.com/watch?v=efdQ9tg9tWk" => "https://www.youtube.com/embed/efdQ9tg9tWk"
+    if (newLink.includes('watch?v=')) {
+      newLink = newLink.replace('watch?v=', 'embed/');
+    }
+    
+    // e.g. "https://www.youtube.com/shorts/efdQ9tg9tWk" => "https://www.youtube.com/embed/efdQ9tg9tWk"
+    if (newLink.includes('/shorts/')) {
+      newLink = newLink.replace('/shorts/', '/embed/');
+    }
+  
+    return newLink;
+};
+
+const GreenArticle = ({ imageUrl, title, author, link }) => {
+    // Check if the link is a YouTube URL
+    const isYouTube = link && (link.includes("youtube.com") || link.includes("youtu.be"));
+
     return (
-        <ArticleContainer>
-            {/* Placeholder Background Image */}
-            <ArticlePlaceholder src="/articlePlaceholder.png" alt="Article Placeholder" />
+        <a href={link} target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
+            <ArticleContainer>
+                {/* Placeholder Background Image */}
+                <ArticlePlaceholder src="/articlePlaceholder.png" alt="Article Placeholder" />
 
-            {/* Centered Image Overlay */}
-            <a href={link} target="_blank" rel="noopener noreferrer">
-                <ArticleImage src={imageUrl} alt={title} />
-            </a>
+                {/* Render either video or image based on the link */}
+                {isYouTube ? (
+                    <ArticleVideo 
+                      src={transformYouTubeLink(link)} 
+                      allowFullScreen
+                      title={title}
+                    />
+                ) : (
+                    <ArticleImage src={imageUrl} alt={title} />
+                )}
 
-            {/* Wrapper for the title and author to ensure dynamic positioning */}
-            <ArticleTextWrapper>
-                <ArticleTitle href={link} target="_blank" rel="noopener noreferrer">{title}</ArticleTitle>
-                <ArticleAuthor>By: {author}</ArticleAuthor>
-            </ArticleTextWrapper>
+                {/* Wrapper for the title and author */}
+                <ArticleTextWrapper>
+                    <ArticleTitle>{title}</ArticleTitle>
+                    <ArticleAuthor>By: {author}</ArticleAuthor>
+                </ArticleTextWrapper>
 
-            {/* SVG Corner Decorations */}
-            <SVGTopLeft>
-                <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80" fill="none">
-                    <polygon points="0,0 80,0 0,80" fill="#B4BF83"/>
-                </svg>
-            </SVGTopLeft>
+                {/* SVG Corner Decorations */}
+                <SVGTopLeft>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80" fill="none">
+                        <polygon points="0,0 80,0 0,80" fill="#B4BF83"/>
+                    </svg>
+                </SVGTopLeft>
 
-            <SVGTopRight>
-                <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80" fill="none">
-                    <polygon points="80,0 0,0 80,80" fill="#546C4D"/>
-                </svg>
-            </SVGTopRight>
+                <SVGTopRight>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80" fill="none">
+                        <polygon points="80,0 0,0 80,80" fill="#546C4D"/>
+                    </svg>
+                </SVGTopRight>
 
-            <SVGBottomLeft>
-                <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80" fill="none">
-                    <polygon points="0,80 80,80 0,0" fill="#546C4D"/>
-                </svg>
-            </SVGBottomLeft>
+                <SVGBottomLeft>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80" fill="none">
+                        <polygon points="0,80 80,80 0,0" fill="#546C4D"/>
+                    </svg>
+                </SVGBottomLeft>
 
-            <SVGBottomRight>
-                <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80" fill="none">
-                    <polygon points="80,80 0,80 80,0" fill="#B4BF83"/>
-                </svg>
-            </SVGBottomRight>
-        </ArticleContainer>
+                <SVGBottomRight>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80" fill="none">
+                        <polygon points="80,80 0,80 80,0" fill="#B4BF83"/>
+                    </svg>
+                </SVGBottomRight>
+            </ArticleContainer>
+        </a>
     );
 };
 
-export default YellowArticle;
+export default GreenArticle;

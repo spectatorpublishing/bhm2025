@@ -29,19 +29,21 @@ const HeaderDiv = styled.div`
 `;
 
 const Header = styled.h1`
-    z-index: 10;
-    width: 80%;
-    font-size: 37px;
-    font-family: 'Lusitana';
-    font-weight: 400;
-    font-style: normal;
-    line-height: 4rem;
-    padding-right: 10rem;
-    @media only screen and (max-width: 768px) {
-        font-size: 24px;
-        padding: 0;
-    }
+  z-index: 10;
+  text-align: center;  /* Center the text */
+  font-size: 37px;
+  font-family: 'Lusitana';
+  font-weight: 400;
+  font-style: normal;
+  line-height: 4rem;
+  margin: 0 auto;      /* Center the element if it has a fixed width */
+  
+  @media only screen and (max-width: 768px) {
+      font-size: 24px;
+      padding: 0;
+  }
 `;
+
 
 const SectAndNames = styled.div`
     display: grid;
