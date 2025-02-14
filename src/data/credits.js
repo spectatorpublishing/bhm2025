@@ -1,40 +1,17 @@
 // Mock data to define all the people who work on a special edition
 export const credits = {
     "Corporate Board": [
-            { staff_name: "Isabella Ramírez", title: "Editor-in-Chief" },
-            { staff_name: "Esha Karam", title: "Managing Editor" },
-            { staff_name: "Katie Zhang", title: "Publisher" }
+            { staff_name: "Shea Vance", title: "Editor-in-Chief" },
+            { staff_name: "Heather Chen", title: "Managing Editor" },
+            { staff_name: "Albert Tsai", title: "Publisher" }
     ],
     "Engineering": [
-      {
-        "staff_name": "Aishani Srikumar",
-        "title": "Engineering Manager"
-      },
-      {
-        "staff_name": "Gabriel Guerra Trigo",
-        "title": "Associate Developer"
-      },
-      {
-        "staff_name": "Emily Xia",
-        "title": "Associate Developer"
-      },
+      { "staff_name": "Noel Negron", "title": "Head of Engineering" },
+      { "staff_name": "Aidan Lee", "title": "Engineering Manager" }
     ],
     "Product": [
-      {
-        "staff_name": "Ethan Xu",
-        "title": "Co-Head of Product"
-      },{
-        "staff_name": "Brandon Pae",
-        "title": "Co-Head of Product"
-      },
-      {
-        "staff_name": "Faith Grady",
-        "title": "Product Design Associate"
-      },
-      {
-        "staff_name": "Lindsey Cacho",
-        "title": "Product Design Associate"
-      },
+      { "staff_name": "Daniela Velazquez", "title": "Head of Product" },
+      { "staff_name": "Melinda Yao", "title": "Product Deputy" }
     ],
     "University News": [
       {
@@ -58,22 +35,9 @@ export const credits = {
       },
     ],
     "Graphics": [
-      {
-        "staff_name": "Laya Gollamudi",
-        "title": "Graphics Editor"
-      },
-      {
-        "staff_name": "Diya Nair",
-        "title": "Deputy Graphics Editor"
-      },
-      {
-        "staff_name": "Jenny Ye",
-        "title": "Deputy Graphics Editor"
-      },
-      {
-        "staff_name": "Wilson Zhen",
-        "title": "Senior Graphics Reporter"
-      },
+      { "staff_name": "Jenny Ye", "title": "Graphics Editor" },
+      { "staff_name": "Wilson Zhen", "title": "Graphics Deputy Editor" },
+      { "staff_name": "Alison Chiu", "title": "Graphics Associate" }
     ],
     "Audio": [
       {
@@ -88,25 +52,10 @@ export const credits = {
       },
     ],
     "Spectrum": [
-      {
-        "staff_name": "Anuthmi Waas",
-        "title": "Spectrum Editor"
-      },{
-        "staff_name": "Sophia Berrocal",
-        "title": "Spectrum Deputy Editor"
-      },
-      {
-        "staff_name": "Terrah Garner",
-        "title": "Staff Writer"
-      },
-      {
-        "staff_name": "Manuela Moreyra",
-        "title": "Staff Writer"
-      },
-      {
-        "staff_name": "Jasmine Li",
-        "title": "Staff Writer"
-      },
+      { "staff_name": "Manuela Moreyra", "title": "Spectrum Editor" },
+      { "staff_name": "Ria Dalal", "title": "Spectrum Deputy Editor" },
+      { "staff_name": "Loyca Jean", "title": "Spectrum Deputy Editor" },
+      { "staff_name": "Jasveenkaur Wahan", "title": "Spectrum Deputy Editor" }
     ],
     "City News": [
       {
@@ -133,62 +82,21 @@ export const credits = {
       },
     ],
     "Arts and Culture": [
-      {
-        "staff_name": "Emily Chen",
-        "title": "A&C Editor"
-      },{
-        "staff_name": "Rachel Shaw",
-        "title": "A&C Deputy Editor"
-      },
-      {
-        "staff_name": "Kristin Merrilees",
-        "title": "A&C Deputy Editor"
-      },
-      {
-        "staff_name": "Joyce Zhang",
-        "title": "A&C Deputy Editor"
-      },
-      {
-        "staff_name": "Sarah Shapiro",
-        "title": "A&C Deputy Editor"
-      },
-      {
-        "staff_name": "Ava Markhovsky",
-        "title": "A&C Staff Writer"
-      },
-      {
-        "staff_name": "Stuart Beal",
-        "title": "A&C Staff Writer"
-      },
-      {
-        "staff_name": "Layla Hussein",
-        "title": "A&C Trainee"
-      },
+      { "staff_name": "Joyce Zhang", "title": "Arts & Culture Editor" },
+      { "staff_name": "Beatrice Moyers", "title": "Deputy Arts & Culture Editor" },
+      { "staff_name": "Rachel Shaw", "title": "Deputy Arts & Culture Editor" },
+      { "staff_name": "Ana Carpenter", "title": "Deputy Arts & Culture Editor" },
+      { "staff_name": "Emily Chen", "title": "Senior Staff Writer" },
+      { "staff_name": "Ariana Eftimiu", "title": "Senior Staff Writer" },
+      { "staff_name": "Madison Rosenfield", "title": "Senior Staff Writer" },
+      { "staff_name": "Taylor Graham", "title": "Staff Writer" }
     ],
     "Sports": [
-      {
-        "staff_name": "Heather Chen",
-        "title": "Sports Editor"
-      },{
-        "staff_name": "Takashi Williams",
-        "title": "Deputy Sports Editor"
-      },
-      {
-        "staff_name": "Sydney Stoller",
-        "title": "Deputy Sports Editor"
-      },
-      {
-        "staff_name": "Emma Dignan",
-        "title": "Deputy Sports Editor"
-      },
-      {
-        "staff_name": "Lucas Metzger",
-        "title": "Deputy Sports Editor"
-      },
-      {
-        "staff_name": "Arielle Rieder",
-        "title": "Staff Writer"
-      },
+      { "staff_name": "Jillian Prunty", "title": "Sports Editor" },
+      { "staff_name": "Arielle Rieder", "title": "Sports Editor" },
+      { "staff_name": "Ashley Flores", "title": "Deputy Sports Editor" },
+      { "staff_name": "Kaya Quebada", "title": "Staff Writer" },
+      { "staff_name": "Andrew Vincenti", "title": "Staff Writer" }
     ],
     "Photo": [
       {
@@ -232,29 +140,10 @@ export const credits = {
       },
     ],
     "Illustrations": [
-      {
-        "staff_name": "Kelsea Petersen",
-        "title": "Illustrations Editor"
-      },{
-        "staff_name": "Cassie Wang",
-        "title": "Deputy Illustratrations Editor"
-      },
-      {
-        "staff_name": "Olya Sukonrat",
-        "title": "Deputy Illustratrations Editor"
-      },
-      {
-        "staff_name": "Macy Sinreich",
-        "title": "Deputy Illustratrations Editor"
-      },
-      {
-        "staff_name": "Julian Michaud",
-        "title": "Senior Staff Illustrator"
-      },
-      {
-        "staff_name": "Saumya Chaudhry",
-        "title": "Staff Illustrator"
-      },
+      { "staff_name": "Conner Sund", "title": "Illustrations Editor" },
+      { "staff_name": "Saumya Chaudhry", "title": "Deputy Illustrations Editor" },
+      { "staff_name": "Anaïs Fotsing", "title": "Deputy Illustrations Editor" },
+      { "staff_name": "Shanying Liu", "title": "Staff Illustrator" }
     ],
     "Copy": [
       {

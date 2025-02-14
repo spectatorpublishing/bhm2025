@@ -14,6 +14,11 @@ const BHM = styled.div`
   font-weight: 400;
   line-height: normal;
   margin: 38px auto;
+
+  @media (max-width: 768px) {
+    font-size: 36px;
+    margin: 21px auto;
+  }
 `;
 
 const Title = () => {

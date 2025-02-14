@@ -14,36 +14,52 @@ const Container = styled.div`
 
   @media (max-width: 768px) {
       flex-direction: column;
+      padding: 0;
   }
 `;
 
-const ArticlesWrapper = styled.div`
-    display: flex;
-    flex-wrap: wrap;
-    gap: 50px;
-    justify-content: center;
-    align-items: flex-start;
-    max-width: 95%;
-
-    @media (max-width: 768px) {
-        flex-direction: column;
-        align-items: center;
-    }
+const NoArticles = styled.div`
+  font-size: 18px;
+  justify-content: center;
+  text-align: center;
+  color: #fff; 
+  font-family: Lusitana;
+  width: 100%;
+  height: auto;
 `;
 
-const NUM_ARTICLES = 9;
-
-const ArticlesPage = () => {
-    const articles = Array.from({ length: NUM_ARTICLES }, (_, index) =>
-        index % 2 === 0 ? <YellowArticle key={index} /> : <GreenArticle key={index} />
-    );
-
+const ArticlesPage = ({ articles = [] }) => {  
     return (
         <Container>
             <NavBar />
-            <ArticlesWrapper>{articles}</ArticlesWrapper>
+            
+                {articles.length > 0 ? (
+                    articles.map((article, index) => (
+                        index % 2 === 0 ? (
+                            <YellowArticle 
+                                key={index} 
+                                imageUrl={article.image_url} 
+                                title={article.article_title} 
+                                author={article.article_authors} 
+                                link={article.article_link} 
+                            />
+                        ) : (
+                            <GreenArticle 
+                                key={index} 
+                                imageUrl={article.image_url} 
+                                title={article.article_title} 
+                                author={article.article_authors} 
+                                link={article.article_link} 
+                            />
+                        )
+                    ))
+                ) : (
+                    <NoArticles>No articles available</NoArticles> 
+                )}
+            
         </Container>
     );
 };
 
 export default ArticlesPage;
+

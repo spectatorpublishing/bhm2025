@@ -16,6 +16,8 @@ const Container = styled.div`
     margin-right: 76px;
     @media only screen and (max-width: 768px) {
         padding: 1rem 1rem 0rem 1rem;
+        margin-left: 24px;
+        margin-right: 24px;
     }
     border-radius: 10px;
 `;
@@ -28,7 +30,7 @@ const HeaderDiv = styled.div`
 
 const Header = styled.h1`
     z-index: 10;
-    width: 100%;
+    width: 80%;
     font-size: 37px;
     font-family: 'Lusitana';
     font-weight: 400;
@@ -36,7 +38,7 @@ const Header = styled.h1`
     line-height: 4rem;
     padding-right: 10rem;
     @media only screen and (max-width: 768px) {
-        font-size: 1.88rem;
+        font-size: 24px;
         padding: 0;
     }
 `;
@@ -70,7 +72,7 @@ const Section = styled.div`
         font-size: 1.5rem;
     }
     @media only screen and (max-width: 768px) {
-        font-size: 1.4rem;
+        font-size: 20px;
         text-align: center;
     }
 `;
@@ -89,7 +91,7 @@ const Name = styled.div`
         font-size: 0.9rem;
     }
     @media only screen and (max-width: 768px) {
-        font-size: 1rem;
+        font-size: 14px;
     }
 `;
 

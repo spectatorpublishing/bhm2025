@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { NavLink } from "react-router-dom";
 
 const Container = styled.div`
   display: flex;
@@ -7,9 +8,18 @@ const Container = styled.div`
   border-radius: 15px;
   justify-content: space-between;
   align-items: center;
-  width: 90%;
+  width: 40%;
   padding: 20px 40px;
   margin: 0 auto 25px auto;
+
+  @media (max-width: 768px) {
+    align-items: center;
+    width: 80%;
+    align-items: center;
+    padding: 10px 25px;
+    border-radius: 10px;
+    margin-bottom: 0;
+  }
 `;
 
 const NavItem = styled.div`
@@ -19,6 +29,11 @@ const NavItem = styled.div`
   font-weight: 400;
   cursor: pointer;
   position: relative;
+  text-decoration: none;
+
+  @media (max-width: 768px) {
+    font-size: 10px;
+  }
 
   &:hover::after {
     content: "";
@@ -29,19 +44,54 @@ const NavItem = styled.div`
     height: 3px;
     background-color: #d6c26b;
     border-radius: 2px;
+
+    @media (max-width: 768px) {
+      height: 1.5px;
+      bottom: -3px;
+    }
+  }
+
+  &.active::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #d6c26b;
+    border-radius: 2px;
+
+    @media (max-width: 768px) {
+      height: 1.5px;
+      bottom: -3px;
+    }
   }
 `;
 
 const NavBar = () => {
   return (
     <Container>
-      <NavItem>University</NavItem>
-      <NavItem>City</NavItem>
-      <NavItem>Opinion</NavItem>
-      <NavItem>A&C</NavItem>
-      <NavItem>Sports</NavItem>
-      <NavItem>Spectrum</NavItem>
-      <NavItem>Podcast</NavItem>
+      <NavItem as={NavLink} to="/" end>
+        University
+      </NavItem>
+      <NavItem as={NavLink} to="/city">
+        City
+      </NavItem>
+      <NavItem as={NavLink} to="/opinion">
+        Opinion
+      </NavItem>
+      <NavItem as={NavLink} to="/ac">
+        A&C
+      </NavItem>
+      <NavItem as={NavLink} to="/sports">
+        Sports
+      </NavItem>
+      <NavItem as={NavLink} to="/spectrum">
+        Spectrum
+      </NavItem>
+      <NavItem as={NavLink} to="/podcast">
+        Podcast
+      </NavItem>
     </Container>
   );
 };
