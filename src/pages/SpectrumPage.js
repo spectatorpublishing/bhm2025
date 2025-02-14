@@ -1,11 +1,10 @@
 import React from 'react';
-import NavBar from '../components/NavBar.js';
-import Articles from '../components/Articles.js'
+import Articles from './ArticlesPage'
 import styled from 'styled-components';
-
-
 import IntroPage from './IntroPage.js';
 import StaffPage from './StaffPage.js';
+
+import { spectrum_articles } from '../data/spectrumarticles.js';
 
 
 
@@ -28,25 +27,10 @@ return (
 
 
 <div>
-    <p>THIS IS THE SPECTRUM PAGE</p>
     <PageWrapper>
         <IntroPage></IntroPage>
             <Container>
-            <NavBar></NavBar>
-
-
-
-
-            {/* HERE IS WHERE WE WOULD USE A MAP FUNCTION */}
-            <Articles></Articles>
-
-
-
-
-
-
-
-
+            <Articles articles={spectrum_articles} />
         </Container>
         <StaffPage></StaffPage>
     </PageWrapper>

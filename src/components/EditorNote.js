@@ -8,16 +8,34 @@ const Container = styled.div`
   height: auto;
   align-items: flex-start;
   flex-shrink: 0;
-//   box-sizing: border-box;
+`;
+
+const FlexContainer = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 1200px;
+  gap: 20px;
+  margin: 0 auto;
+  
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+    gap: 0px;
+  }
 `;
 
 const Illo = styled.img`
+    width: 50%;
     height: auto;
     object-fit: contain;
-    flex-shrink: 1;
+    flex-shrink: 0;
     
-    @media only screen and (max-width: 768px) {
-        width: 100%; // Full width on smaller screens
+    @media only screen and (max-width: 1024px) {
+        width: 85%;
+        margin-bottom: 32px;
     }
 `;
 
@@ -29,6 +47,17 @@ const Title = styled.div`
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+
+    @media only screen and (max-width: 768px) {
+        justify-content: center;
+        text-align: center;
+        width: 100%;
+        margin: 0;
+        font-size: 30px;
+    }
+    @media (max-width: 375px) {
+        font-size: 24px;
+      }
 `;
 
 const Letter = styled.div`
@@ -42,17 +71,34 @@ const Letter = styled.div`
     font-weight: 400;
     line-height: 170.6%;
     margin-left: 34px;
+
+    @media only screen and (max-width: 1024px) {
+        width: 65%; /* Make text box larger for 820px screens */
+        margin-left: 0px;
+    }
+    @media only screen and (max-width: 768px) {
+        width: 80%;
+        margin-left: 0px;
+        margin-top: 10px;
+        font-size: 11.272px;
+    }
 `;
 
+
 const StyledHr = styled.hr`
-    width: 467.5px;
+    justify-content: left;
+    width: 100%;
     height: 3px;
     flex-shrink: 0;
     background-color: #D6C26B;
     border: none;
-    // border-top: 3px solid #D6C26B;
     border-radius: 3px;
-    margin: 0px 0;
+    margin: 0 auto;
+
+    @media only screen and (max-width: 768px) {
+        width: 90%;
+        margin: 0 auto; /* Keep it centered on mobile */
+    }
 `;
 
 const Signatures = styled.div`
@@ -63,6 +109,7 @@ const Signatures = styled.div`
     @media only screen and (max-width: 768px){
         font-size: 1.88rem;
         text-align: left;
+        margin-top: 5px;
     }    
 `;
 
@@ -83,9 +130,9 @@ const Signature = styled.div`
         font-family: Caveat;
         
         @media only screen and (max-width: 768px) {
-            font-size: 2rem;
-            line-height: 3px;
-            padding-top: 15px;
+            font-size: 16px;
+            line-height: 170.6%;
+            padding-top: 10px;
         }
        
     }
@@ -99,8 +146,9 @@ const Signature = styled.div`
         margin: 0rem;
 
         @media only screen and (max-width: 768px){
-            font-size: 1rem;
-            display: inline-block;
+            font-size: 11.272px;
+            padding: 0;
+            margin: 0;
         }
     }
     margin: 0rem;
@@ -110,21 +158,25 @@ const Signature = styled.div`
 const EditorNote = () => {
     return (
       <Container>
-          <Illo src="illo.png" alt="illopic" />
+        <FlexContainer>
+          <Illo src="BHM.png" alt="BHM art" />
           <Letter>
-              <Title>Letter from the Editor</Title>
+              <Title>Letter from the Editors</Title>
               <StyledHr />
               <br />
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. A mollis amet vitae sed purus, semper ullamcorper augue vitae. Hac pretium urna, tempus sit quam suspendisse maecenas et. Egestas neque sollicitudin rhoncus vitae at ipsum pulvinar faucibus. Facilisi risus blandit egestas in dignissim et sapien faucibus.
+              Every February, Spectator dedicates a special edition in celebration of Black History Month, recognizing the lives and legacies of Black Americans throughout U.S. history. This year, like every year, our special edition seeks to highlight the voices, stories, and contributions of Black Columbians and Black residents of Morningside Heights and West Harlem—in history, today, and in the years to come.
               <br /><br />
-              Id nascetur vel eu fermentum elementum ac cras enim. Dui habitant commodo consequat sit in molestie in id. Ipsum volutpat etiam tristique fringilla. Tellus eu quis mauris massa tristique tortor, egestas luctus lacus. Gravida facilisis sagittis eget facilisi molestie amet. Id nascetur vel eu fermentum elementum ac cras enim. Dui habitant commodo consequat sit in molestie in id. Ipsum volutpat etiam tristique fringilla. Tellus eu quis mauris massa tristique tortor, egestas luctus lacus. 
+              In this issue, look to our news section to explore the history of affirmative action at Columbia, a deep dive into the fluctuating presence of Black authors on the Literature Humanities syllabus, and a feature of the New York Interfaith Commission. Learn about the legacy of George Gregory Jr., the second Black Columbia basketball player and the first to be named an All-American, and read about Barnard’s centennial celebration of author Zora Neale Hurston’s matriculation at the college. Watch for a feature of the recently-revived Columbia Gospel Choir, and turn to Spectrum for Black History Month movie recommendations and a guide to related events on campus.
+              <br /><br />
+              Thank you for reading our 2025 Black History Month edition and for joining Spectator as we highlight these stories. We are excited—each month and each year—to continue the conversation and continue celebrating the indelible legacy of Black stories on and around our campus.
               <br /><br />
               <Signatures>
-                <Signature className='left'><div className='name'>Name</div><div className='title'>Editor in Chief</div></Signature>
+                <Signature className='left'><div className='name'>Shea Vance</div><div className='title'>Editor in Chief</div></Signature>
                 <Spacing/>
-                <Signature><div className='name'>Name</div><div className='title'>Managing Editor</div></Signature>
+                <Signature><div className='name'>Heather Chen</div><div className='title'>Managing Editor</div></Signature>
             </Signatures>
           </Letter>
+          </FlexContainer>
       </Container>
     );
   };

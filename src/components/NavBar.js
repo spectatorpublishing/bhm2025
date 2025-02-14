@@ -9,8 +9,18 @@ const Container = styled.div`
   justify-content: space-between;
   align-items: center;
   width: 90%;
-  margin: 0 auto 50px auto;
   padding: 20px 40px;
+  margin: 0 auto 25px auto;
+
+  @media (max-width: 768px) {
+    padding: 0;
+    align-items: center;
+    width: 70%;
+    align-items: center;
+    padding: 10px 40px;
+    border-radius: 10px;
+    margin-bottom: 0px;
+  }
 `;
 
 const NavItem = styled.div`
@@ -22,6 +32,10 @@ const NavItem = styled.div`
   position: relative;
   text-decoration: none;
 
+  @media (max-width: 768px) {
+    font-size: 10px;
+  }
+
   &:hover::after {
     content: "";
     position: absolute;
@@ -31,6 +45,11 @@ const NavItem = styled.div`
     height: 3px;
     background-color: #d6c26b;
     border-radius: 2px;
+
+    @media (max-width: 768px) {
+      height: 1.5px;
+      bottom: -3px;
+    }
   }
 
   &.active::after {
@@ -42,6 +61,11 @@ const NavItem = styled.div`
     height: 3px;
     background-color: #d6c26b;
     border-radius: 2px;
+
+    @media (max-width: 768px) {
+      height: 1.5px;
+      bottom: -3px;
+    }
   }
 `;
 
@@ -54,9 +78,6 @@ const NavBar = () => {
       <NavItem as={NavLink} to="/city">
         City
       </NavItem>
-      <NavItem as={NavLink} to="/opinion">
-        Opinion
-      </NavItem>
       <NavItem as={NavLink} to="/ac">
         A&C
       </NavItem>
@@ -65,9 +86,6 @@ const NavBar = () => {
       </NavItem>
       <NavItem as={NavLink} to="/spectrum">
         Spectrum
-      </NavItem>
-      <NavItem as={NavLink} to="/podcast">
-        Podcast
       </NavItem>
     </Container>
   );
