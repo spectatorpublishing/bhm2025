@@ -7,7 +7,7 @@ const Container = styled.div`
     z-index: 5;
     color: white;
     background-color: #141715;
-    padding: 2rem 2rem 0rem 2rem;
+    padding: 2rem 2rem 0rem 90px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -26,6 +26,8 @@ const HeaderDiv = styled.div`
     z-index: 10;
     color: white;
     text-align: center;
+    width: 80%;
+    margin-bottom: 35px;
 `;
 
 const Header = styled.h1`
@@ -35,11 +37,15 @@ const Header = styled.h1`
     font-family: 'Lusitana';
     font-weight: 400;
     font-style: normal;
-    line-height: 4rem;
+    line-height: 2.5rem;
     padding-right: 10rem;
+    text-align: center;  /* Ensure text is centered */
+    
     @media only screen and (max-width: 768px) {
         font-size: 24px;
-        padding: 0;
+        padding: 0; /* Remove right padding on smaller screens */
+        width: 100%; /* Allow full width usage */
+        line-height: 2rem;
     }
 `;
 

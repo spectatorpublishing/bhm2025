@@ -18,9 +18,8 @@ const Container = styled.div`
     width: 70%;
     align-items: center;
     padding: 10px 40px;
-    // padding-top: 10px;
-    // padding-bottom: 10px;
     border-radius: 10px;
+    margin-bottom: 0px;
   }
 `;
 

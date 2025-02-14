@@ -33,10 +33,12 @@ const Illo = styled.img`
     object-fit: contain;
     flex-shrink: 0;
     
-    @media only screen and (max-width: 768px) {
-        width: 100%;
+    @media only screen and (max-width: 1024px) {
+        width: 85%;
+        margin-bottom: 32px;
     }
 `;
+
 
 const Title = styled.div`
     color: #FFF;
@@ -52,6 +54,10 @@ const Title = styled.div`
         width: 100%;
         margin: 0;
         font-size: 30px;
+    }
+    @media (max-width: 375px) {
+        font-size: 24px;
+      }
 `;
 
 const Letter = styled.div`
@@ -66,14 +72,18 @@ const Letter = styled.div`
     line-height: 170.6%;
     margin-left: 34px;
 
+    @media only screen and (max-width: 1024px) {
+        width: 65%; /* Make text box larger for 820px screens */
+        margin-left: 0px;
+    }
     @media only screen and (max-width: 768px) {
         width: 80%;
         margin-left: 0px;
         margin-top: 10px;
         font-size: 11.272px;
     }
-
 `;
+
 
 const StyledHr = styled.hr`
     justify-content: left;

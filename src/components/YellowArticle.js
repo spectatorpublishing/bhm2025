@@ -33,7 +33,11 @@ const ArticleImage = styled.img`
     @media (max-width: 768px) {
         width: 160px;
         height: 160px;
-      }
+    }
+    @media (max-width: 375px) {
+        width: 130px;
+        height: 130px;
+    }
 `;
 
 const ArticleTextWrapper = styled.div`
@@ -47,6 +51,10 @@ const ArticleTextWrapper = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    @media (max-width: 768px) {
+       top: 63%;
+    }
 `;
 
 const ArticleTitle = styled.div`
@@ -62,6 +70,9 @@ const ArticleTitle = styled.div`
     @media (max-width: 768px) {
         font-size: 14px;
       }
+    @media (max-width: 390px) {
+        font-size: 12px;
+      }
 `;
 
 const ArticleAuthor = styled.div`
@@ -75,6 +86,10 @@ const ArticleAuthor = styled.div`
 
     @media (max-width: 768px) {
         font-size: 10px;
+      }
+    @media (max-width: 375px) {
+        font-size: 10px;
+        margin-top: 15px;
       }
 `;
 
