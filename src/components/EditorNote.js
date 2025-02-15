@@ -164,7 +164,7 @@ const EditorNote = () => {
     return (
       <Container>
         <FlexContainer>
-          <Illo src="BHM.png" alt="BHM art" />
+          <Illo src="https://cloudfront-us-east-1.images.arcpublishing.com/spectator/LV7FQLI76JGUHFCGHCJKDP7YCY/resizer/FQUdAszPeOMQWMTn0PxnVK8JPe0=/arc-anglerfish-arc2-prod-spectator/public/LV7FQLI76JGUHFCGHCJKDP7YCY.png" alt="BHM art" />
           <Letter>
               <Title>Letter from the Editors</Title>
               <Writing>
