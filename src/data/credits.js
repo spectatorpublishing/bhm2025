@@ -15,23 +15,23 @@ export const credits = {
     ],
     "University News": [
       {
-        "staff_name": "Sarah Huddleston",
+        "staff_name": "Isha Banerjee",
         "title": "University News Editor"
       },{
-        "staff_name": "Shea Vance",
-        "title": "University News Editor"
-      },
-      {
-        "staff_name": "Sabrina Ticer-Wurr",
-        "title": "Deputy News Editor"
-      },
-      {
-        "staff_name": "Maya Stahl",
-        "title": "Deputy News Editor"
-      },
-      {
-        "staff_name": "Saul Quintanar",
+        "staff_name": "Daniela Ospino Pallares",
         "title": "Senior Staff Writer"
+      },
+      {
+        "staff_name": "Tulasi Cherukuri",
+        "title": "Staff Writer"
+      },
+      {
+        "staff_name": "Wiann Wilson",
+        "title": "Staff Writer"
+      },
+      {
+        "staff_name": "Ria Vasishtha",
+        "title": "Staff Writer"
       },
     ],
     "City News": [
