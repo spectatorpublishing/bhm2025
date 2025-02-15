@@ -23,13 +23,16 @@ const Container = styled.div`
 `;
 
 const HeaderDiv = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     z-index: 10;
     color: white;
-    text-align: center;
-    justify-content: center;
     width: 80%;
     margin-bottom: 35px;
 `;
+
 
 const Header = styled.h1`
     z-index: 10;
@@ -39,7 +42,6 @@ const Header = styled.h1`
     font-weight: 400;
     font-style: normal;
     line-height: 2.5rem;
-    padding-right: 10rem;
     text-align: center;
     
     @media only screen and (max-width: 768px) {
