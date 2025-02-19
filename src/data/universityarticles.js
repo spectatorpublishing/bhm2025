@@ -24,6 +24,12 @@ export const university_articles = [
         article_link: "https://www.columbiaspectator.com/news/2025/02/12/a-history-of-affirmative-action-at-columbia-and-barnard/"
     },
     {
+        image_url: "https://cloudfront-us-east-1.images.arcpublishing.com/spectator/2NRH55FB3VH4FGWEXDTQAIJTAY.gif",
+        article_title: "Four years ago, Literature Humanities students read five Black authors. Now, they read two.",
+        article_authors: "Tulasi Cherukuri and Ria Vashishtha",
+        article_link: "https://www.columbiaspectator.com/news/2025/02/13/four-years-ago-literature-humanities-students-read-five-black-authors-now-they-read-two/"
+    },
+    {
         image_url: "https://www.youtube.com/watch?v=2g4BYaDYSRE",
         article_title: "The return of Columbia's Gospel Choir",
         article_authors:"Tasneem Meem, Jordan Pettiford, Hanan Ali, Ashlynne Graham, and Elliot Heath",
