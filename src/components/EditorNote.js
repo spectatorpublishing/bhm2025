@@ -164,7 +164,7 @@ const EditorNote = () => {
     return (
       <Container>
         <FlexContainer>
-          <Illo src="https://cloudfront-us-east-1.images.arcpublishing.com/spectator/LV7FQLI76JGUHFCGHCJKDP7YCY/resizer/FQUdAszPeOMQWMTn0PxnVK8JPe0=/arc-anglerfish-arc2-prod-spectator/public/LV7FQLI76JGUHFCGHCJKDP7YCY.png" alt="BHM art" />
+          <Illo src="https://cloudfront-us-east-1.images.arcpublishing.com/spectator/7NIVUJXTHZAKLHCCNDPEENR7FY/resizer/ZnPPmHArKdKU3-RAoZWi3FrfDiI=/arc-anglerfish-arc2-prod-spectator/public/7NIVUJXTHZAKLHCCNDPEENR7FY.PNG" alt="BHM art" />
           <Letter>
               <Title>Letter from the Editors</Title>
               <Writing>
