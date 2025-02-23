@@ -38,7 +38,7 @@ const BHM = styled.div`
 
 const Title = () => {
   return (
-      <BHM>Black History Month</BHM>
+      <BHM>Hi Black History Month</BHM>
   );
 };
 
